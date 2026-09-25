@@ -17,6 +17,7 @@ const StyledMenu = styled.nav`
         display: flex;
         flex-direction: row;
         gap: 80px;
+        list-style: none;
     }
     li{
         a{

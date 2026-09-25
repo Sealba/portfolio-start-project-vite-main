@@ -10,16 +10,19 @@ export const Main = () => {
             <FlexWrapper direction="column">
                 <h2>I am Sergey Zaharov</h2>
                 <h1>A Web Developer. </h1>
-                <Button>Let’s Begin</Button>
+                <Button align={"flex-start"}>Let’s Begin</Button>
             </FlexWrapper>
+            <BackgroundWrapper>
             <Photo src={photo} alt="photo"/>
             <Background src={background} alt="background" />
+            </BackgroundWrapper>
         </SectionMain>
     );
 };
 const SectionMain = styled.section`
     position: relative;
-    overflow: hidden;
+    overflow-y: visible;
+    overflow-x: clip;
     z-index: 2;
     display: flex;
     flex-direction: row;
@@ -37,10 +40,14 @@ const SectionMain = styled.section`
      object-position: top center;
      border-radius: 50px 0 50px 0;
  `
+const BackgroundWrapper = styled.div`
+position: relative;
+width: fit-content;
+`
 const Background = styled.img`
     position: absolute;
-    width:546px;
-    top: 186px;
-    right: 0;
+    width:666px;
+    top: 61px;
+    right: -272px;
     z-index: -1;
 `
