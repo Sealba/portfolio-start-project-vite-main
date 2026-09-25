@@ -4,13 +4,14 @@ type ButtonPropsType = {
     children?: string;
     as?: "a" | "button";
     href?: string;
+    target?: "_blank";
     align?: string;
 }
 
 
-export const Button = ({children,as,href,align}: ButtonPropsType) => {
+export const Button = ({children,as,href,align,target}: ButtonPropsType) => {
     return (
-        <Btn $align={align} as={as} href={href}>{children}</Btn>
+        <Btn $align={align} as={as} target={target} href={href}>{children}</Btn>
     );
 };
 
@@ -29,4 +30,6 @@ const Btn = styled.button<{ $align?: string; }>`
     cursor: pointer;
     background: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
     text-decoration: none;
+    position: relative;
+    z-index: 2;
 `

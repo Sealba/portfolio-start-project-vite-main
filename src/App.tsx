@@ -6,27 +6,28 @@ import photopng1 from "./assets/images/1.png";
 import photopng2 from "./assets/images/2.png";
 import photopng3 from "./assets/images/3.png";
 import photopng4 from "./assets/images/4.png";
+import {Technologies} from "./layout/sections/technologies/Technologies.tsx";
 
 export const ProjectsData = [{
-    id: 1, name: "Project 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    id: 1, name: "Фабрика Карат",
+    description: "Акция компании Карат",
     image: photopng1,
-    link: "#",
+    link: "https://fabrika-karat.ru/",
 }, {
-    id: 2, name: "Project 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    id: 2, name: "Тесс + Ламода",
+    description: "Коллаборация TESS X LAMODA",
     image: photopng2,
-    link: "#",
+    link: "https://tess-lamoda.ru/",
 }, {
-    id: 3, name: "Project 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    id: 3, name: "Dixy + Jardin",
+    description: "Коллаборация Dixy X Jardin",
     image: photopng3,
-    link: "#",
+    link: "https://jardin-dixy.ru/",
 }, {
-    id: 4, name: "Project 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    id: 4, name: "Greenfield",
+    description: "Весенняя акиция",
     image: photopng4,
-    link: "#",
+    link: "https://greenfield-promo.ru/",
 },]
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Header />
             <Main/>
             <Projects/>
+            <Technologies/>
         </div>
     )
 }

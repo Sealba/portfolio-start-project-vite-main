@@ -14,8 +14,8 @@ export const ProjectCard:FC<ProjectCardPropsType> = (props) => {
         <ProjectCardContainer>
             <ProjectCardImage src={props.image} alt={"project"}/>
             <ProjectCardTitle>{props.name}</ProjectCardTitle>
-            < ProjectCardDescription>{props.description}</ProjectCardDescription>
-            <Button as="a" href={props.link} align="flex-start">Look it up</Button>
+            <ProjectCardDescription>{props.description}</ProjectCardDescription>
+            <Button as="a" href={props.link} target={"_blank"} align="flex-start">Look it up</Button>
         </ProjectCardContainer>
     );
 };
@@ -31,6 +31,9 @@ const ProjectCardContainer = styled.div`
 `
 const ProjectCardImage = styled.img`
     width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top center;
     max-width: 500px;
     border-radius: 24px 8px 8px 8px;
     margin-bottom: 40px;

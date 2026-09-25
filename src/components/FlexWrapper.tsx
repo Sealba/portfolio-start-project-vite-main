@@ -5,6 +5,7 @@ type FlexWrapperPropsType = {
     align?: string;
     direction?: string;
     wrap?: string;
+    gap?: string;
 }
 
 export const FlexWrapper =styled.div<FlexWrapperPropsType>`
@@ -13,6 +14,7 @@ export const FlexWrapper =styled.div<FlexWrapperPropsType>`
     align-items: ${props => props.align || "stretch"};
     justify-items: ${props => props.justify || "flex-start"};
     flex-wrap: ${props => props.wrap || "nowrap"};
+    gap: ${props => props.gap || "0px"};
     
     h2{
         font-weight: 600;

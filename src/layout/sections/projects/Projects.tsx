@@ -20,7 +20,7 @@ export const Projects = () => {
 
 const ProjectSections = styled.section`
     position: relative;
-    z-index: -1;
+    z-index: 0;
     background: #161d2a;
     padding: 140px 150px 140px 150px;
 `
