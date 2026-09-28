@@ -77,7 +77,7 @@ const ExperienceWrapper = styled.div`
 
     &:before {
         position: absolute;
-        top: 43rem;
+        top: 47rem;
         content: '';
         display: flex;
         width: 76%;
