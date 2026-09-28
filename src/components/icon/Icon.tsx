@@ -20,8 +20,8 @@ export const Icon = (props: IconPropsType) => {
 const { href, iconId, as, width, height, viewBox} = props;
 
     const SVG = () => <svg
-        width={width || "50"}
-        height={height || "50"}
+        width={width || "50rem"}
+        height={height || "50rem"}
         viewBox={viewBox || "0 0 50 50"}
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -36,6 +36,6 @@ const IconLink = styled.a<IconPropsTypeStyle>`
     display: flex;
     text-decoration: none;
     cursor: pointer;
-    width: ${props => props.width || "50px"};
-    height: ${props => props.height || "50px"};
+    width: ${props => props.width || "50rem"};
+    height: ${props => props.height || "50rem"};
 `

@@ -2,11 +2,13 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/sectiontitle/SectionTitle.tsx";
 import {ProjectsData} from "../../../App.tsx";
 import {ProjectCard} from "../../../components/projectcard/ProjectCard.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 
 export const Projects = () => {
     return (
-        <ProjectSections>
+        <ProjectSections id={"projects"}>
+            <ProjectsWrapper className={"max-container"}>
             <SectionTitle>Projects</SectionTitle>
             <ProjectCards>
                 {ProjectsData.map((item, index) => {
@@ -14,6 +16,7 @@ export const Projects = () => {
                                         image={item.image}></ProjectCard>
                 })}
             </ProjectCards>
+            </ProjectsWrapper>
         </ProjectSections>
     );
 };
@@ -21,13 +24,22 @@ export const Projects = () => {
 const ProjectSections = styled.section`
     position: relative;
     z-index: 0;
-    background: #161d2a;
-    padding: 140px 150px 140px 150px;
+    background: ${theme.colors.secondaryBg};
+`
+const ProjectsWrapper = styled.div`
+    padding: 140rem 150rem 140rem 150rem;
+    @media ${theme.media.mobile}{
+        padding: 70rem 15rem 70rem 15rem;
+    }
 `
 const ProjectCards = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
-    row-gap: 60px;
-    margin: 0 auto;`
+    column-gap: 40rem;
+    row-gap: 60rem;
+    margin: 0 auto;
+    @media ${theme.media.mobile} {
+        grid-template-columns: 1fr;
+        gap: 30rem;
+    }`
 

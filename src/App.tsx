@@ -7,6 +7,9 @@ import photopng2 from "./assets/images/2.png";
 import photopng3 from "./assets/images/3.png";
 import photopng4 from "./assets/images/4.png";
 import {Technologies} from "./layout/sections/technologies/Technologies.tsx";
+import {Experience} from "./layout/sections/experience/Experience.tsx";
+import {Footer} from "./layout/footer/Footer.tsx";
+
 
 export const ProjectsData = [{
     id: 1, name: "Фабрика Карат",
@@ -25,7 +28,7 @@ export const ProjectsData = [{
     link: "https://jardin-dixy.ru/",
 }, {
     id: 4, name: "Greenfield",
-    description: "Весенняя акиция",
+    description: "Весенняя акция",
     image: photopng4,
     link: "https://greenfield-promo.ru/",
 },]
@@ -37,6 +40,8 @@ function App() {
             <Main/>
             <Projects/>
             <Technologies/>
+            <Experience/>
+            <Footer/>
         </div>
     )
 }

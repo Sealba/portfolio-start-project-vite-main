@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme.ts";
 
 type ProgressBarPropsType = {
     children?: React.ReactNode;
@@ -22,20 +23,20 @@ const ProgressList = styled.div`
 `
 const ProgressText = styled.p`
     font-weight: 600;
-    font-size: 24px;
-    color: #fff;
-    margin: 0 0 0 18px;`
+    font-size: 24rem;
+    color: ${theme.colors.font};
+    margin: 0 0 0 18rem;`
 const ContentBar = styled.div<{ $progress?: number; }>`
     width: 100%;
-    height: 18px;
+    height: 18rem;
     background-color: #162950;
-    border-radius: 23px;
+    border-radius: 23rem;
     &:after {
         display: flex;
         width: ${props => props.$progress ? `${props.$progress}%` : 0};
-        border-radius: 23px;
-        height: 18px;
+        border-radius: 23rem;
+        height: 18rem;
         content: '';
-        background: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
+        background: ${theme.colors.gradient};
     }
 `

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme.ts";
 
 type ButtonPropsType = {
     children?: string;
@@ -15,21 +16,29 @@ export const Button = ({children,as,href,align,target}: ButtonPropsType) => {
     );
 };
 
-const Btn = styled.button<{ $align?: string; }>`
+ export const Btn = styled.button<{ $align?: string; }>`
     align-self: ${props => props.$align === "flex-start" ? "flex-start;" : "center;"}
     display: flex;
     align-items: center;
     justify-content: center;
     width: fit-content;
-    border-radius: 83px;
+    border-radius: 83rem;
     font-weight: 600;
-    font-size: 20px;
-    color: #fff;
-    padding: 15px 66px;
+    font-size: 20rem;
+    color: ${theme.colors.font};
+    padding: 15rem 66rem;
     border: none;
     cursor: pointer;
-    background: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
+    background: ${theme.colors.gradient};
     text-decoration: none;
     position: relative;
     z-index: 2;
+     transition: opacity ${theme.transition};
+    
+    @media ${theme.media.mobile} {
+        font-size: 18rem;
+    }
+     &:hover {
+         opacity: 0.5;
+     }
 `
