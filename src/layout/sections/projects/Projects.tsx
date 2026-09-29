@@ -9,13 +9,14 @@ export const Projects = () => {
     return (
         <ProjectSections id={"projects"}>
             <ProjectsWrapper className={"max-container"}>
-            <SectionTitle>Projects</SectionTitle>
-            <ProjectCards>
-                {ProjectsData.map((item, index) => {
-                    return <ProjectCard key={index} link={item.link} description={item.description} name={item.name}
-                                        image={item.image}></ProjectCard>
-                })}
-            </ProjectCards>
+                <SectionTitle>Projects</SectionTitle>
+                <ProjectCards>
+                    {ProjectsData.map((item, index) => {
+                        return <ProjectCard key={item.id + index + "Projects"} link={item.link} description={item.description}
+                                            name={item.name}
+                                            image={item.image}></ProjectCard>
+                    })}
+                </ProjectCards>
             </ProjectsWrapper>
         </ProjectSections>
     );
@@ -28,7 +29,7 @@ const ProjectSections = styled.section`
 `
 const ProjectsWrapper = styled.div`
     padding: 140rem 150rem 140rem 150rem;
-    @media ${theme.media.mobile}{
+    @media ${theme.media.mobile} {
         padding: 70rem 15rem 70rem 15rem;
     }
 `

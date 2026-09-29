@@ -23,7 +23,7 @@ export const DefaultStyle = createGlobalStyle`
     @use "breakpoints" as *;
 
     * {
-        outline: none;
+        //outline: none;
         box-sizing: border-box;
     }
 

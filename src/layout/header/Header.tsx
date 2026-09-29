@@ -21,7 +21,7 @@ export const Header = () => {
             <StyledHeaderMobile>
                 <StyledHeaderWrapper className={"max-container"}>
                     <Logo/>
-                    <BurgerMenu onClick={()=>{setOpen(!open)}}><Icon iconId={open ? "close" : "burger"} width={"32rem"} height={"32rem"} viewBox={"0 0 32 32"} as={'svg'}/></BurgerMenu>
+                    <BurgerMenu aria-label={open ? "close" : "open"} aria-haspopup={"menu"} onClick={()=>{setOpen(!open)}}><Icon iconId={open ? "close" : "burger"} width={"32rem"} height={"32rem"} viewBox={"0 0 32 32"} as={'svg'}/></BurgerMenu>
                 </StyledHeaderWrapper>
             </StyledHeaderMobile>
             {open ? <MobileMenu onLinkClick={()=>setOpen(false)}/> : null }

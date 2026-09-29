@@ -7,7 +7,7 @@ type MobileMenuPropsType = {
 
 export const MobileMenu = ({onLinkClick}: MobileMenuPropsType) => {
     return (
-        <StyledMenu>
+        <StyledMenu aria-modal={true}>
 
             <ul>
                 <li><a onClick={onLinkClick} href="#projects">Projects</a></li>
