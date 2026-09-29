@@ -5,9 +5,9 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Button} from "../../../components/button/Button.tsx";
 import {theme} from "../../../styles/Theme.ts";
 
-export const Main = () => {
+export const Hero = () => {
     return (
-        <SectionMain>
+        <SectionHero>
             <SectionMainWrapper className={"max-container"}>
                 <FlexWrapper direction="column" mDirection={"column"}>
                     <h2>I am Sergey Zaharov</h2>
@@ -19,10 +19,10 @@ export const Main = () => {
                     <Background src={background} alt="background"/>
                 </BackgroundWrapper>
             </SectionMainWrapper>
-        </SectionMain>
+        </SectionHero>
     );
 };
-const SectionMain = styled.section`
+const SectionHero = styled.section`
     position: relative;
     overflow-y: visible;
     overflow-x: clip;
