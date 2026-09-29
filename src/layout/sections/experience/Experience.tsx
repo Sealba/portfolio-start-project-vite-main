@@ -13,8 +13,7 @@ export const Experience = () => {
                     <ExperienceDate>
                         <DateDotWrapper>
                             <Date>2018</Date>
-                            <Dot>
-                            </Dot>
+                            <Dot/>
                         </DateDotWrapper>
                         <Text>
                             Completed a bachelor's degree at the university.</Text>
@@ -22,8 +21,7 @@ export const Experience = () => {
                     <ExperienceDate>
                         <DateDotWrapper>
                             <Date>2020</Date>
-                            <Dot>
-                            </Dot>
+                            <Dot/>
                         </DateDotWrapper>
                         <Text>
                             Completed my master's degree and began learning object-oriented programming principles by
@@ -32,8 +30,7 @@ export const Experience = () => {
                     <ExperienceDate>
                         <DateDotWrapper>
                             <Date>2025</Date>
-                            <Dot>
-                            </Dot>
+                            <Dot/>
                         </DateDotWrapper>
                         <Text>
                             Gained four years of experience in PLC programming and acquired basic knowledge of backend
@@ -42,8 +39,7 @@ export const Experience = () => {
                     <ExperienceDate>
                         <DateDotWrapper>
                             <Date>2026</Date>
-                            <Dot>
-                            </Dot>
+                            <Dot/>
                         </DateDotWrapper>
                         <Text>I am actively working on and learning frontend development with React.</Text>
                     </ExperienceDate>
@@ -61,7 +57,7 @@ const ExperiencceWrapperColor = styled.div`
     flex-direction: column;
     padding: 100rem 150rem 140rem 150rem;
     margin: 0;
-    @media ${theme.media.mobile}{
+    @media ${theme.media.mobile} {
         padding: 70rem 15rem 100rem 15rem;
     }
 `
@@ -87,7 +83,7 @@ const ExperienceWrapper = styled.div`
         transform: translateX(-50%);
         background: ${theme.colors.gradient};
         @media ${theme.media.mobile} {
-            transform:none;
+            transform: none;
             width: 8rem;
             top: 26rem;
             height: 80%;
@@ -95,8 +91,9 @@ const ExperienceWrapper = styled.div`
             background: linear-gradient(360deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);;
         }
     }
-    @media  ${theme.media.mobile}{
-    flex-direction: column;
+
+    @media ${theme.media.mobile} {
+        flex-direction: column;
     };
 `
 const ExperienceDate = styled.div`
@@ -106,7 +103,7 @@ const ExperienceDate = styled.div`
     justify-content: center;
     gap: 20rem;
     width: 100%;
-    @media ${theme.media.mobile}{
+    @media ${theme.media.mobile} {
         flex-direction: column;
         gap: 10rem;
     }
@@ -129,7 +126,7 @@ const DateDotWrapper = styled.div`
     gap: 0;
     align-items: center;
     justify-content: center;
-    @media ${theme.media.mobile}{
+    @media ${theme.media.mobile} {
         flex-direction: row-reverse;
         gap: 20rem;
         align-items: center;

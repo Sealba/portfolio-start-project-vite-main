@@ -65,7 +65,7 @@ const Content = styled.div`
 @media ${theme.media.mobile} {
     margin: 0 auto 85rem auto;
 }`
-const AdditionalInfo = styled.p`;
+const AdditionalInfo = styled.h3`;
     font-weight: 600;
     font-size: 44rem;
     color: ${theme.colors.font};

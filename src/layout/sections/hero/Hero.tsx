@@ -10,8 +10,8 @@ export const Hero = () => {
         <SectionHero>
             <SectionMainWrapper className={"max-container"}>
                 <FlexWrapper direction="column" mDirection={"column"}>
-                    <h2>I am Sergey Zaharov</h2>
-                    <h1>A Web Developer. </h1>
+                    <TextName>I am Sergey Zaharov</TextName>
+                    <TextAbout>A Web Developer.</TextAbout>
                     <Button align={"flex-start"} as={"a"} href={"#projects"}>Let’s Begin</Button>
                 </FlexWrapper>
                 <BackgroundWrapper>
@@ -51,7 +51,7 @@ const Photo = styled.img`
     border-radius: 50rem 0 50rem 0;
     @media ${theme.media.mobile} {
         width: 335rem;
-        height: 400rem;  
+        height: 400rem;
     }
 `
 const BackgroundWrapper = styled.div`
@@ -66,6 +66,27 @@ const Background = styled.img`
     z-index: -1;
     @media ${theme.media.mobile} {
         top: 223rem;
-        right: -383rem;  
+        right: -383rem;
+    }
+`
+const TextName = styled.h2`
+    font-weight: 600;
+    font-size: 54rem;
+    color: ${theme.colors.font};
+    margin: 0 0 15rem 0;
+    @media ${theme.media.mobile} {
+        margin: 0 0 25rem 0;
+        font-size: 36rem;
+    }
+`
+
+const TextAbout = styled.h1`
+    font-weight: 500;
+    font-size: 18rem;
+    color: #bcbcbc;
+    margin: 0 0 60rem 0;
+    @media ${theme.media.mobile} {
+        margin: 0 0 40rem 0;
+        font-size: 16rem;
     }
 `
