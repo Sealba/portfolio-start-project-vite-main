@@ -4,6 +4,7 @@ import {SectionTitle} from "../../../components/sectiontitle/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.ts";
+import {ProgressBarData} from "../../../mocks/mock.ts";
 
 
 export const Technologies = () => {
@@ -12,10 +13,9 @@ export const Technologies = () => {
             <TechnologiesWrapper className={"max-container"}>
                 <SectionTitle>Technologies</SectionTitle>
                 <Content>
-                    <ProgressBar progress={60}>Html</ProgressBar>
-                    <ProgressBar progress={70}>CSS, Sass</ProgressBar>
-                    <ProgressBar progress={50}>React</ProgressBar>
-                    <ProgressBar progress={60}>Styled Components</ProgressBar>
+                    {ProgressBarData.map((item,index)=>{
+                        return <ProgressBar key={item.id + index + "ProgressBar"} progress={item.progress} text={item.text} />
+                    })}
                 </Content>
                 <AdditionalInfo>Additional technologies and skills</AdditionalInfo>
                 <FlexWrapperTechnologies align={"center"} gap={"50rem"} >

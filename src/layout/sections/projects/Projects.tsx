@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/sectiontitle/SectionTitle.tsx";
-import {ProjectsData} from "../../../App.tsx";
+import {ProjectsData} from "../../../mocks/mock.ts";
 import {ProjectCard} from "../../../components/projectcard/ProjectCard.tsx";
 import {theme} from "../../../styles/Theme.ts";
 
@@ -12,9 +12,12 @@ export const Projects = () => {
                 <SectionTitle>Projects</SectionTitle>
                 <ProjectCards>
                     {ProjectsData.map((item, index) => {
-                        return <ProjectCard key={item.id + index + "Projects"} link={item.link} description={item.description}
+                        return <ProjectCard key={item.id + index + "Projects"}
+                                            link={item.link}
+                                            description={item.description}
                                             name={item.name}
-                                            image={item.image}></ProjectCard>
+                                            image={item.image}>
+                        </ProjectCard>
                     })}
                 </ProjectCards>
             </ProjectsWrapper>

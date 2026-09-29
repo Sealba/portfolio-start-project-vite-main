@@ -10,7 +10,7 @@ type IconPropsType = {
     href?: string;
 }
 
-type IconPropsTypeStyle = {
+type IconPropsStyleType = {
     width?: string;
     height?: string;
 }
@@ -32,7 +32,7 @@ const { href, iconId, as, width, height, viewBox} = props;
     return as === "a" ? <IconLink width={props.width} height={props.height} href={href} target={"_blank"}><SVG/></IconLink> : <SVG/>
 };
 
-const IconLink = styled.a<IconPropsTypeStyle>`
+const IconLink = styled.a<IconPropsStyleType>`
     display: flex;
     text-decoration: none;
     cursor: pointer;

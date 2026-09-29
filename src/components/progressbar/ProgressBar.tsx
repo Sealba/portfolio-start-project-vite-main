@@ -2,14 +2,14 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme.ts";
 
 type ProgressBarPropsType = {
-    children?: React.ReactNode;
+    text: string;
     progress: number;
 }
 
 export const ProgressBar = (props: ProgressBarPropsType) => {
     return (
         <ProgressList>
-            <ProgressText>{props.children}</ProgressText>
+            <ProgressText>{props.text}</ProgressText>
             <ContentBar $progress={props.progress > 100 ? 100 : props.progress < 0 ? 0 : props.progress}></ContentBar>
         </ProgressList>
     );
@@ -21,7 +21,7 @@ const ProgressList = styled.div`
     flex-direction: column;
     gap: 0;
 `
-const ProgressText = styled.p`
+const ProgressText = styled.span`
     font-weight: 600;
     font-size: 24rem;
     color: ${theme.colors.font};
