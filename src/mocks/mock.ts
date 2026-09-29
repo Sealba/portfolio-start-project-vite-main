@@ -32,3 +32,9 @@ export const ProgressBarData = [
     {id: 3, progress:50 , text:"React" },
     {id: 4, progress:60 , text:"Styled Components" },
 ]
+
+export const SocialsData = [
+    {id:1 , type: "a" , link: "https://github.com/Sealba", svgId:"gitHub", width:"32rem", height:"32rem", viewbox:"0 0 32 32"},
+    {id:2 , type : "a"  , link: "/" , svgId: "linkIn", width:"32rem", height:"32rem", viewbox:"0 0 32 32"},
+    {id:3 , type: "a" , link: "https://t.me/Sealba", svgId:"telegram", width:"35rem", height:"30rem", viewbox:"0 0 35 30"},
+]

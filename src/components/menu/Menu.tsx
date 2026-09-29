@@ -29,11 +29,11 @@ const StyledMenu = styled.nav`
             color: ${theme.colors.font};
             cursor: pointer;
             transition: color ${theme.transition};
+            scroll-behavior: smooth;
+    
             &:hover {
                 color: ${theme.colors.hover};
             }
-        }
-        
     }
     @media ${theme.media.mobile} {
         display: none;

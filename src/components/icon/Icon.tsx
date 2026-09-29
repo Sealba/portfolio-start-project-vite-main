@@ -6,7 +6,7 @@ type IconPropsType = {
     width?: string;
     height?: string;
     viewBox?: string;
-    as: "a" | "svg";
+    as: "a" | "svg" | string;
     href?: string;
 }
 
