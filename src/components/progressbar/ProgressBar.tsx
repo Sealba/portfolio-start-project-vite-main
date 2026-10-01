@@ -21,7 +21,7 @@ const ProgressList = styled.div`
     flex-direction: column;
     gap: 0;
 `
-const ProgressText = styled.span`
+const ProgressText = styled.h3`
     font-weight: 600;
     font-size: 24rem;
     color: ${theme.colors.font};
