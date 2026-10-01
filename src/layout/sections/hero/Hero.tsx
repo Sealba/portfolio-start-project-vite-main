@@ -59,7 +59,6 @@ const BackgroundWrapper = styled.div`
     width: fit-content;
     padding: 2rem;
     border-radius: 50rem 0 50rem 0;
-    overflow: hidden;
     background: ${theme.colors.gradient};
 `
 const Background = styled.img`
