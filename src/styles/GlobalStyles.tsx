@@ -124,6 +124,7 @@ export const DefaultStyle = createGlobalStyle`
     button {
       cursor: pointer;
     }
+    
     .max-container {
         max-width: 1440px;
         margin: 0 auto;

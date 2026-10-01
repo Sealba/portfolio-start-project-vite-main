@@ -16,7 +16,7 @@ export const ProjectCard:FC<ProjectCardPropsType> = (props) => {
             <ProjectCardImage src={props.image} alt={"project"}/>
             <ProjectCardTitle>{props.name}</ProjectCardTitle>
             <ProjectCardDescription>{props.description}</ProjectCardDescription>
-            <BtnCard as="a" href={props.link} target={"_blank"} $align="flex-start" >Look it up</BtnCard>
+            <Btn as="a" href={props.link} target={"_blank"} $align="flex-start" >Look it up</Btn>
         </ProjectCardContainer>
     );
 };
@@ -29,8 +29,12 @@ const ProjectCardContainer = styled.div`
     align-items: center;
     border: 1rem solid #a39d9d;
     border-radius: 50rem 0;
+    
     @media ${theme.media.mobile}{
         padding: 25rem 25rem 25rem 25rem;  
+        ${Btn} {
+            width: 100%;
+        }
     }
 `
 const ProjectCardImage = styled.img`
@@ -87,9 +91,9 @@ const ProjectCardDescription = styled.p`
         margin: 0 0 30rem 0;
         text-align: center;
     }`
-const BtnCard = styled(Btn)`
-    @media ${theme.media.mobile}{
-        width: 100%;
-    }`
+// const BtnCard = styled(Btn)`
+//     @media ${theme.media.mobile}{
+//         width: 100%;
+//     }`
 
 
