@@ -57,6 +57,10 @@ const Photo = styled.img`
 const BackgroundWrapper = styled.div`
     position: relative;
     width: fit-content;
+    padding: 2rem;
+    border-radius: 50rem 0 50rem 0;
+    overflow: hidden;
+    background: ${theme.colors.gradient};
 `
 const Background = styled.img`
     position: absolute;
