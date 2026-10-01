@@ -38,3 +38,13 @@ export const SocialsData = [
     {id:2 , type : "a"  , link: "/" , svgId: "linkIn", width:"32rem", height:"32rem", viewbox:"0 0 32 32"},
     {id:3 , type: "a" , link: "https://t.me/Sealba", svgId:"telegram", width:"35rem", height:"30rem", viewbox:"0 0 35 30"},
 ]
+export const SocialsDataTechnologies = [
+    {id:1 , type: "a" , link: "https://git-scm.com/", svgId:"git", width:"100rem", height:"100rem", viewbox:"0 0 100 100"},
+    {id:2 , type : "a"  , link: "https://github.com/Sealba" , svgId: "gitHub2", width:"100rem", height:"100rem", viewbox:"0 0 100 100"},
+    {id:3 , type: "a" , link: "https://www.figma.com/", svgId:"figma", width:"100rem", height:"100rem", viewbox:"0 0 100 100"},
+]
+export const SocialsDataTechnologiesMobile = [
+    {id:1 , type: "a" , link: "https://git-scm.com/", svgId:"git", width:"60rem", height:"60rem", viewbox:"0 0 100 100"},
+    {id:2 , type : "a"  , link: "https://github.com/Sealba" , svgId: "gitHub2", width:"60rem", height:"60rem", viewbox:"0 0 100 100"},
+    {id:3 , type: "a" , link: "https://www.figma.com/", svgId:"figma", width:"60rem", height:"60rem", viewbox:"0 0 100 100"},
+]

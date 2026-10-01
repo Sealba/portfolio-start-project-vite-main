@@ -4,8 +4,8 @@ import {SectionTitle} from "../../../components/sectiontitle/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.ts";
-import {ProgressBarData} from "../../../mocks/mock.ts";
-// import {SocialsData} from "../../../mocks/mock.ts";
+import {ProgressBarData, SocialsDataTechnologiesMobile} from "../../../mocks/mock.ts";
+ import {SocialsDataTechnologies} from "../../../mocks/mock.ts";
 
 export const Technologies = () => {
     return (
@@ -20,22 +20,14 @@ export const Technologies = () => {
                 </Content>
                 <AdditionalInfo>Additional technologies and skills</AdditionalInfo>
                 <FlexWrapperTechnologies align={"center"} gap={"50rem"}>
-                    < Icon iconId={"git"} href={"https://git-scm.com/"} as={"a"} width={"100rem"} height={"100rem"}
-                           viewBox={"0 0 100 100"}></Icon>
-                    <Icon iconId={"gitHub2"} href={"https://github.com/Sealba"} as={"a"} width={"100rem"}
-                          height={"100rem"}
-                          viewBox={"0 0 100 100"}></Icon>
-                    <Icon iconId={"figma"} href={"https://www.figma.com/"} as={"a"} width={"100rem"} height={"100rem"}
-                          viewBox={"0 0 100 100"}></Icon>
+                    {SocialsDataTechnologies.map((items, index) => {
+                        return <Icon key={items.id + index + "Icon"} as={items.type} iconId={items.svgId} href={items.link} width={items.width} height={items.height} viewBox={items.viewbox} />
+                    })}
                 </FlexWrapperTechnologies>
                 <FlexWrapperTechnologiesMobile mAlign={"center"} mGap={"30rem"}>
-                    <Icon iconId={"git"} href={"https://git-scm.com/"} as={"a"} width={"60rem"} height={"60rem"}
-                          viewBox={"0 0 100 100"}></Icon>
-                    <Icon iconId={"gitHub2"} href={"https://github.com/Sealba"} as={"a"} width={"60rem"}
-                          height={"60rem"}
-                          viewBox={"0 0 100 100"}></Icon>
-                    <Icon iconId={"figma"} href={"https://www.figma.com/"} as={"a"} width={"60rem"} height={"60rem"}
-                          viewBox={"0 0 100 100"}></Icon>
+                    {SocialsDataTechnologiesMobile.map((items, index) => {
+                        return <Icon key={items.id + index + "IconMobile"} as={items.type} iconId={items.svgId} href={items.link} width={items.width} height={items.height} viewBox={items.viewbox} />
+                    })}
                 </FlexWrapperTechnologiesMobile>
             </TechnologiesWrapper>
         </TechnologiesSection>
