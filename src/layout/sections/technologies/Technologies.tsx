@@ -5,7 +5,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.ts";
 import {ProgressBarData} from "../../../mocks/mock.ts";
-
+// import {SocialsData} from "../../../mocks/mock.ts";
 
 export const Technologies = () => {
     return (
@@ -13,14 +13,15 @@ export const Technologies = () => {
             <TechnologiesWrapper className={"max-container"}>
                 <SectionTitle>Technologies</SectionTitle>
                 <Content>
-                    {ProgressBarData.map((item,index)=>{
-                        return <ProgressBar key={item.id + index + "ProgressBar"} progress={item.progress} text={item.text} />
+                    {ProgressBarData.map((item, index) => {
+                        return <ProgressBar key={item.id + index + "ProgressBar"} progress={item.progress}
+                                            text={item.text}/>
                     })}
                 </Content>
                 <AdditionalInfo>Additional technologies and skills</AdditionalInfo>
-                <FlexWrapperTechnologies align={"center"} gap={"50rem"} >
-                    <Icon iconId={"git"} href={"https://git-scm.com/"} as={"a"} width={"100rem"} height={"100rem"}
-                          viewBox={"0 0 100 100"}></Icon>
+                <FlexWrapperTechnologies align={"center"} gap={"50rem"}>
+                    < Icon iconId={"git"} href={"https://git-scm.com/"} as={"a"} width={"100rem"} height={"100rem"}
+                           viewBox={"0 0 100 100"}></Icon>
                     <Icon iconId={"gitHub2"} href={"https://github.com/Sealba"} as={"a"} width={"100rem"}
                           height={"100rem"}
                           viewBox={"0 0 100 100"}></Icon>
@@ -38,7 +39,8 @@ export const Technologies = () => {
                 </FlexWrapperTechnologiesMobile>
             </TechnologiesWrapper>
         </TechnologiesSection>
-    );
+    )
+        ;
 };
 
 const TechnologiesSection = styled.section`
@@ -52,7 +54,7 @@ const TechnologiesWrapper = styled.div`
     @media ${theme.media.mobile} {
         padding: 70rem 15rem 110rem 15rem;
     }
-    
+
 `
 const Content = styled.div`
     display: flex;
@@ -62,9 +64,9 @@ const Content = styled.div`
     max-width: 900rem;
     margin: 0 auto 120rem auto;
     gap: 25rem;
-@media ${theme.media.mobile} {
-    margin: 0 auto 85rem auto;
-}`
+    @media ${theme.media.mobile} {
+        margin: 0 auto 85rem auto;
+    }`
 const AdditionalInfo = styled.h3`;
     font-weight: 600;
     font-size: 44rem;
@@ -81,6 +83,6 @@ const FlexWrapperTechnologies = styled(FlexWrapper)`
     }`
 const FlexWrapperTechnologiesMobile = styled(FlexWrapper)`
     display: none;
-@media ${theme.media.mobile} {
-    display: flex;
-}`
+    @media ${theme.media.mobile} {
+        display: flex;
+    }`
