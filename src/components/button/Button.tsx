@@ -7,12 +7,13 @@ type ButtonPropsType = {
     href?: string;
     target?: "_blank";
     align?: string;
+    type?: "button" | "submit";
 }
 
 
-export const Button = ({children,as,href,align,target}: ButtonPropsType) => {
+export const Button = ({children,as,href,align,target, type}: ButtonPropsType) => {
     return (
-        <Btn $align={align} as={as} target={target} href={href}>{children}</Btn>
+        <Btn type={type} $align={align} as={as} target={target} href={href}>{children}</Btn>
     );
 };
 
