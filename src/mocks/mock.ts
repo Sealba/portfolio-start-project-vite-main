@@ -35,7 +35,7 @@ export const ProgressBarData = [
 
 export const SocialsData = [
     {id:1 , type: "a" , link: "https://github.com/Sealba", svgId:"gitHub", width:"32rem", height:"32rem", viewbox:"0 0 32 32"},
-    {id:2 , type : "a"  , link: "/" , svgId: "linkIn", width:"32rem", height:"32rem", viewbox:"0 0 32 32"},
+    {id:2 , type : "a"  , link: "https://www.linkedin.com/in/sergey-zaharov-0b2b02443/" , svgId: "linkIn", width:"32rem", height:"32rem", viewbox:"0 0 32 32"},
     {id:3 , type: "a" , link: "https://t.me/Sealba", svgId:"telegram", width:"35rem", height:"30rem", viewbox:"0 0 35 30"},
 ]
 export const SocialsDataTechnologies = [
